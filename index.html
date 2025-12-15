@@ -7,7 +7,7 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
+            padding: 20px 0;
             font-family: 'Microsoft YaHei', 'SimHei', sans-serif;
             background-color: #66192c;
             color: #d9b866;
@@ -18,37 +18,88 @@
             justify-content: center;
             align-items: center;
         }
+        .container {
+            max-width: 90%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
         h1 {
-            font-size: 4.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 3.2em;
+            margin: 20px 0;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
         }
         h2 {
-            font-size: 2.5em;
-            margin: 30px 0;
+            font-size: 2.2em;
+            margin: 20px 0;
         }
         p {
-            font-size: 1.8em;
-            margin: 20px;
+            font-size: 1.5em;
+            line-height: 1.8;
+            margin: 20px auto;
             max-width: 800px;
         }
+        .images {
+            margin: 40px 0;
+        }
+        .images img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            border-radius: 15px;
+            margin: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+        }
         .contact {
-            font-size: 2.2em;
+            font-size: 2em;
             font-weight: bold;
-            margin-top: 50px;
+        }
+        .contact-btn {
+            display: inline-block;
+            background-color: #d9b866;
+            color: #66192c;
+            font-size: 1.8em;
+            font-weight: bold;
+            padding: 15px 50px;
+            margin: 40px 0;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.5);
         }
         .highlight {
             color: #ffeb3b;
             font-size: 1.2em;
         }
+
+        /* 平板及以上 */
+        @media (min-width: 768px) {
+            h1 { font-size: 4.5em; }
+            h2 { font-size: 3em; }
+            p { font-size: 1.8em; }
+            .contact { font-size: 2.5em; }
+            .contact-btn { font-size: 2.2em; padding: 20px 70px; }
+            .container { max-width: 80%; }
+        }
+
+        /* 电脑大屏 */
+        @media (min-width: 1024px) {
+            h1 { font-size: 5em; }
+            .container { max-width: 1000px; }
+        }
     </style>
 </head>
 <body>
-    <h1>蔡玉皎·傳統薄皮蒸餃</h1>
-    <h2>诚邀加盟招商</h2>
-    <p>企业使命：守护传统技艺，成就伙伴梦想，共创幸福味道</p>
-    <p>品牌优势：正宗传统口味，稳定供应链，专业运营支持</p>
-    <p>加盟热线：<span class="contact">18038920861</span></p>
-    <p class="highlight">机会有限，速来咨询，奋斗共赢，共创财富！</p>
+    <div class="container">
+        <h1>蔡玉皎·傳統薄皮蒸餃</h1>
+        <h2>诚邀加盟招商</h2>
+
+        <p>企业使命：守护传统技艺，成就伙伴梦想，共创幸福味道</p>
+        <p>品牌优势：正宗传统口味，稳定供应链，专业运营支持</p>
+
+        <p>加盟热线：<span class="contact">18038920861</span></p>
+
+        <a href="tel:18038920861" class="contact-btn">立即拨打 18038920861 咨询加盟</a>
+
+        <p class="highlight">机会有限，速来咨询，奋斗共赢，共创财富！</p>
+    </div>
 </body>
 </html>
